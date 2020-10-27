@@ -15,6 +15,9 @@ function App() {
         <Translate direction="left" />
       </Section>
       <Section title="Transform: translateY">
+        <Translate direction="up" />
+        <Translate direction="down" />
+        <Translate direction="vertical" />
       </Section>
     </div>
   );

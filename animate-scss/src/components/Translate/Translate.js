@@ -8,8 +8,10 @@ const Translate = (props) => {
     const { direction } = props;
 
     const labels = {
-        'right': 'Right',
-        'left': 'Left',
+        'right': 'to right',
+        'left': 'to left',
+        'up': 'up',
+        'down': 'down',
         'default': '',
     };
 
@@ -21,6 +23,9 @@ const Translate = (props) => {
         <div className={classNames('Translate', {
             'Translate--right': direction === 'right',
             'Translate--left': direction === 'left',
+            'Translate--up': direction === 'up',
+            'Translate--down': direction === 'down',
+            'Translate--vertical': direction === 'vertical',
         })}>{setLabel()}</div>
     )
 }

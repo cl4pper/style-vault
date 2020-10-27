@@ -1,10 +1,10 @@
 $movement-hor: 100px;
-$movement-ver: 50px;
+$movement-ver: 20px;
 
 .Translate {
     width: 160px;
     padding: 5px 0;
-    margin: 10px 0;
+    margin: 10px;
     background-color: #000;
     text-align: center;
     color: #FFF;
@@ -22,15 +22,21 @@ $movement-ver: 50px;
         animation-iteration-count: infinite;
     }
 
+    &--vertical {
+        animation: moveVertically;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
     &--up {
         animation: moveUp;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
     }
 
     &--down {
-        animation: modeDown;
-        animation-duration: 3s;
+        animation: moveDown;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
     }
 
@@ -70,6 +76,20 @@ $movement-ver: 50px;
         }
     }
 
+    @keyframes moveVertically {
+        0% {
+            transform: translateY($movement-ver);
+        }
+
+        50% {
+            transform: translateY(-$movement-ver);
+        }
+
+        100% {
+            transform: translateY($movement-ver);
+        }
+    }
+
     @keyframes moveUp {
         0% {
             opacity: 0;
@@ -84,7 +104,7 @@ $movement-ver: 50px;
     @keyframes moveDown {
         0% {
             opacity: 0;
-            transform: translateY($movement-ver);
+            transform: translateY(-$movement-ver);
         }
 
         100% {
