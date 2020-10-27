@@ -1,0 +1,15 @@
+.Section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px 10px;
+    border: 1px dashed #000;
+
+    &__title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}

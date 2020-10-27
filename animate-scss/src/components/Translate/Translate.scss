@@ -1,0 +1,59 @@
+$movemente-distance: 100px;
+
+.Translate {
+    width: 160px;
+    padding: 5px 0;
+    margin: 10px 0;
+    background-color: #000;
+    text-align: center;
+    color: #FFF;
+    animation: default 3s infinite;
+
+    &--left {
+        animation: moveToLeft;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    &--right {
+        animation: moveToRight;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes default {
+        0% {
+            transform: translateX($movemente-distance);
+        }
+
+        50% {
+            transform: translateX(-$movemente-distance);
+        }
+
+        100% {
+            transform: translateX($movemente-distance);
+        }
+    }
+
+    @keyframes moveToLeft {
+        0% {
+            opacity: 0;
+            transform: translateX($movemente-distance);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes moveToRight {
+        0% {
+            opacity: 0;
+            transform: translateX(-$movemente-distance);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
