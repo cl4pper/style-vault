@@ -1,15 +1,24 @@
 .Section {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 80%;
+    display: grid;
+    grid-template-rows: auto auto;
     margin: 20px;
-    padding: 20px 10px;
+    padding: 20px 40px;
     border: 1px dashed #000;
 
     &__title {
         font-size: 32px;
         font-weight: bold;
         margin-bottom: 20px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--vertical {
+            flex-direction: column !important;
+        }
     }
 }

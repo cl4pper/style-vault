@@ -9,12 +9,12 @@ import { Translate, Section } from './components';
 function App() {
   return (
     <div className="App">
-      <Section title="Translate">
-        <div>
-          <Translate />
-          <Translate direction="right" />
-          <Translate direction="left" />
-        </div>
+      <Section title="Transform: translateX" vertical>
+        <Translate /> 
+        <Translate direction="right" />
+        <Translate direction="left" />
+      </Section>
+      <Section title="Transform: translateY">
       </Section>
     </div>
   );
