@@ -1,0 +1,59 @@
+$movement: 100px;
+
+.TranslateX {
+    width: 160px;
+    padding: 5px 0;
+    margin: 10px;
+    background-color: #000;
+    text-align: center;
+    color: #FFF;
+    animation: defaultX 3s infinite;
+
+    &--left {
+        animation: moveToLeft;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    &--right {
+        animation: moveToRight;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes defaultX {
+        0% {
+            transform: translateX($movement);
+        }
+
+        50% {
+            transform: translateX(-$movement);
+        }
+
+        100% {
+            transform: translateX($movement);
+        }
+    }
+
+    @keyframes moveToLeft {
+        0% {
+            opacity: 0;
+            transform: translateX($movement);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes moveToRight {
+        0% {
+            opacity: 0;
+            transform: translateX(-$movement);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}

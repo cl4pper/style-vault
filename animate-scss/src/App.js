@@ -4,20 +4,20 @@ import React from 'react';
 import './App.scss';
 
 // COMPONENTS
-import { Translate, Section } from './components';
+import { TranslateX, TranslateY, Section } from './components';
 
 function App() {
   return (
     <div className="App">
       <Section title="Transform: translateX" vertical>
-        <Translate /> 
-        <Translate direction="right" />
-        <Translate direction="left" />
+        <TranslateX /> 
+        <TranslateX direction="right" />
+        <TranslateX direction="left" />
       </Section>
       <Section title="Transform: translateY">
-        <Translate direction="up" />
-        <Translate direction="down" />
-        <Translate direction="vertical" />
+        <TranslateY />
+        <TranslateY direction="up" />
+        <TranslateY direction="down" />
       </Section>
     </div>
   );
