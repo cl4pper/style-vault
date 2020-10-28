@@ -4,7 +4,7 @@ import React from 'react';
 import './App.scss';
 
 // COMPONENTS
-import { TranslateX, TranslateY, Section } from './components';
+import { TranslateX, TranslateY, Rotate, Section } from './components';
 
 function App() {
   return (
@@ -18,6 +18,11 @@ function App() {
         <TranslateY />
         <TranslateY direction="up" />
         <TranslateY direction="down" />
+      </Section>
+      <Section title="Rotate">
+        <Rotate />
+        <Rotate clockwise label="clockwise" />
+        <Rotate counterclock label="counterclock" />
       </Section>
     </div>
   );
